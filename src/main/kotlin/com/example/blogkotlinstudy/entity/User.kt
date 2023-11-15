@@ -3,14 +3,17 @@ package com.example.blogkotlinstudy
 import javax.persistence.*
 
 @Entity
-class Blog(
+class User(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0,
 
         @Column(nullable = false)
-        var title: String,
+        var username: String,
 
         @Column(nullable = false)
-        var content: String
+        var email: String,
+
+        @OneToMany(mappedBy = "author", cascade = [CascadeType.ALL], orphanRemoval = true)
+        var posts: List<Post> = mutableListOf()
 )
