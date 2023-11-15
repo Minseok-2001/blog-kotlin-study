@@ -3,6 +3,7 @@ package com.example.blogkotlinstudy.entity
 import jakarta.persistence.*
 
 @Entity
+@Table(name = "users")
 class User(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,5 +16,5 @@ class User(
         var email: String,
 
         @OneToMany(mappedBy = "author", cascade = [CascadeType.ALL], orphanRemoval = true)
-        var posts: List<Post> = mutableListOf()
+        var posts: MutableList<Post> = mutableListOf()
 )
