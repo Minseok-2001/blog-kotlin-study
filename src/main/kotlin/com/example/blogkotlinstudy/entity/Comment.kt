@@ -8,7 +8,7 @@ class Comment(
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0,
 
-        @Column(nullable = false, length = 1000)
+        @Column(nullable = false, length = 5000)
         var content: String,
 
         @ManyToOne(fetch = FetchType.LAZY)
