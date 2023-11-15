@@ -1,6 +1,6 @@
-package com.example.blogkotlinstudy
+package com.example.blogkotlinstudy.entity
 
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 class Comment(
