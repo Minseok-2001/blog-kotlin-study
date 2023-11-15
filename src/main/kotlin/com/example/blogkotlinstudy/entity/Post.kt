@@ -19,5 +19,5 @@ class Post(
         var author: User,
 
         @OneToMany(mappedBy = "post", cascade = [CascadeType.ALL], orphanRemoval = true)
-        var comments: List<Comment> = mutableListOf()
+        var comments: MutableList<Comment> = mutableListOf()
 )
