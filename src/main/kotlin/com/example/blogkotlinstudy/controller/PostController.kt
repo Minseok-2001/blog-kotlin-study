@@ -1,5 +1,6 @@
 package com.example.blogkotlinstudy.controller
 
+import com.example.blogkotlinstudy.dto.PostDto
 import com.example.blogkotlinstudy.service.PostService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -11,8 +12,8 @@ class PostController(private val postService: PostService) {
 
 
 	@GetMapping
-	fun getPosts(): ResponseEntity<Any> {
-		return ResponseEntity.ok(this.postService.getPosts())
+	fun getPosts(): List<PostDto> {
+		return (this.postService.getPosts())
 	}
 
 	@GetMapping("/{postId}")
