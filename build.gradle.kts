@@ -11,6 +11,8 @@ plugins {
     id("org.hibernate.orm") version "6.2.13.Final"
     id("org.graalvm.buildtools.native") version "0.9.27"
     id("org.jlleitschuh.gradle.ktlint") version "11.6.1"
+    id("org.springdoc.openapi-gradle-plugin") version "1.8.0"
+
 }
 
 allOpen {
@@ -51,6 +53,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.modulith:spring-modulith-starter-core")
     implementation("org.springframework.modulith:spring-modulith-starter-jpa")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     developmentOnly("org.springframework.boot:spring-boot-docker-compose")
